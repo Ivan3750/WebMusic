@@ -34,7 +34,7 @@ export const dataMusic = [
         artist: "Billie Eilish",
         genre: "Pop",
         img: "4.jpg",
-        url : "../assets/tracks/Billie Eilish – BIRDS OF A FEATHER.mp3",
+        url : "../assets/tracks/Billie Eilish - BIRDS OF A FEATHER.mp3",
         
     },
     {
@@ -96,7 +96,7 @@ export const dataMusic = [
         title: "Swimming Pools",
         artist: "Kendrick Lamar",
         genre: "Rep",
-        img: "11.jpg", //change for car photo and audio
+        img: "11.jpg", 
         url : "../assets/tracks/Kendrick Lamar - Swimming Pools (Drank).mp3",
         
     }, 
@@ -139,7 +139,7 @@ export const dataMusic = [
     {
         id: 16,
         title: "Don't Wanna Leave",
-        artist: "Jacob Latimore feat. Mulatto",
+        artist: "Jacob Latimore",
         genre: "R’n’B",
         img: "16.jpg",
         url : "../assets/tracks/Pretenders - Don't Get Me Wrong (megapesni.fm).mp3",
@@ -165,7 +165,7 @@ export const dataMusic = [
     },
     {
         id: 19,
-        title: "After Hours (Preview)",
+        title: "After Hours",
         artist: "Kehlani",
         genre: "R’n’B",
         img: "19.jpg",
@@ -183,7 +183,7 @@ export const dataMusic = [
     },
     {
         id: 21,
-        title: "No More (I Can't Stand It) (Airplay Mix)",
+        title: "No More",
         artist: "MAXX",
         genre: "80-90",
         img: "21.jpg",
@@ -209,7 +209,7 @@ export const dataMusic = [
     },
     {
         id: 24,
-        title: "Drill Instructor (Short Mix)",
+        title: "Drill Instructor",
         artist: "Captain Jack",
         genre: "80-90",
         img: "24.jpg",
@@ -225,7 +225,7 @@ export const dataMusic = [
     },
     {
         id: 26,
-        title: "Also Sprach Zarathustra - Fanfare",
+        title: "Also Sprach Zarathustra",
         artist: "R. Strauss",
         genre: "Classic",
         img: "26.jpg",
@@ -237,15 +237,15 @@ export const dataMusic = [
         artist: "GEORGE GERSHWIN",
         genre: "Classic",
         img: "27.jpg",
-        url : "../assets/tracks/George Gershwin – Rhapsody In Blue.mp3",
+        url : "../assets/tracks/George Gershwin - Rhapsody In Blue.mp3",
     },
     {
         id: 28,
-        title: "Mozart's House",
-        artist: "Clean Bandit",
+        title: "River Flows in You",
+        artist: "Caterina Barontini",
         genre: "Classic",
         img: "28.jpg",
-        url : "./audio/twenty one pilots - doubt.mp3", //? 
+        url : "../assets/tracks/Caterina Barontini - River Flows in You.mp3", //? 
     },
     {
         id: 29,
@@ -258,9 +258,9 @@ export const dataMusic = [
     {
         id: 30,
         title: "Симфонія № 5",
-        artist: " Людвіг ван Бетховен",
+        artist: "Людвіг ван Бетховен",
         genre: "Classic",
         img: "30.jpg",
-        url : "./audio/twenty one pilots - doubt.mp3", //?
-    },
+        url : "../assets/tracks/betkhoven-simfonija-5-allegro-con-brio.mp3", //?
+    }
 ]

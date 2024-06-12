@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="../styles/player.css">
-        <link rel="stylesheet" href="../styles/main.css">
+    <title>Music</title>
+    <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/standart.css">
+    <link rel="stylesheet" href="../styles/player.css">
     <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" type="text/css"
@@ -18,7 +18,6 @@
 <body class="body">
       <div class="mask">
        <div class="load-1">
-        <p>Loading 1</p>
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
@@ -34,7 +33,6 @@
 <!--                 <button class="btn-text pp-btn">Next</button>
  -->                <button class="btn-like pp-btn">Like</button>
                 <select name="" id="select-genre">
-                    <option value="none">Select</option>
                     <option value="Pop">Pop</option>
                     <option value="Rock">Rock</option>
                     <option value="Rep">Rep</option>
@@ -59,9 +57,9 @@
             <div class="track-info">
                 <img src="" alt="" class="img-track">
                 <div class="track-detalis">
-                <div id="track-artist">Twenty One Pilots</div>
-                <div id="track-title">Heavydirtysoul</div>
-                <div id="track-genre">Heavydirtysoul</div>
+                <div id="track-artist"></div>
+                <div id="track-title"></div>
+                <div id="track-genre"></div>
             </div>
             </div>
         </div>
@@ -107,21 +105,28 @@
     <div class="background">
         <header  class="header-new">
             <a href="index.html">
-                <img src="../assets/images/pngwing.com (6).png" alt="" class="header__logo">
+<!--                 <img src="../assets/images/pngwing.com (6).png" alt="" class="header__logo">
+ -->                <p class="header__name">Music</p>
             </a>
-            <div class="search">
-                <input type="text" id="search-input" class="search-input">
-                <img src="../assets/icons/search.png" alt="" class="search-img">
+            <div class="search-box">
+                <div class="search">
+                    <input type="text" id="search-input" class="search-input">
+                    <img src="../assets/icons/search.png" alt="" class="search-img">
+                    </div>
+                <div id="resultsContainer">
+                    
                 </div>
+            </div>
     
         </header>
         <section class="hero">
             <div class="hero__right">
-                <img  class="hero__img" src="../assets/images/pngwing.com (7).png" alt="">
+                <img  class="hero__img" src="../assets/images/pngwing.com (7).png" alt="" id="heroImg">
             </div>
             <div class="hero__left">
                 <img src="../assets/images/pngwing.com.png" alt="" class="hero__left-img">
                 <h1 class="hero__left-title">Enjoy <br> Music</h1>
+                <p class="hero__left-description">Your favorite place to discover new musical horizons. With us you can enjoy your favorite tracks, find new artists and create your own playlists. Join our community of music lovers and experience the magic of sound with us!</p>
                     </div>
             
         </section>
@@ -163,7 +168,7 @@
         <section class="slider">
             <div class="slider__text">
                 <p class="slider__text-subtitle">Fresh Quality</p>
-                <p class="slider__text-title">We Offer People Best Way <br> To Eat Best Food</p>
+                <p class="slider__text-title">We Offer People Best Music</p>
                 <img src="" alt=""
                     class="slider__text-img">
             </div>
@@ -171,37 +176,37 @@
                 <div class="slick-slider">
                     <div>
                         <div class="product-card"><img class="product-img"
-                                src="../assets/images/3.png"
+                                src="../assets/images/tracks/1.jpg"
                                 style="width: 224px;">
-                            <h4 class="product-name">Rap</h4>
-                            <p class="product-info">Gourmet burger with arugula, feta cheese, quail eggs and...</p>
+                            <h4 class="product-name">Feel Good Inc</h4>
+                            <p class="product-info">Gorillaz</p>
                             
                         </div>
                     </div>
                     <div>
                         <div class="product-card"><img class="product-img"
-                                src="../assets/images/3.png"
+                            src="../assets/images/tracks/5.jpg"
                                 style="width: 224px;">
-                            <h4 class="product-name">Rap</h4>
-                            <p class="product-info">Gourmet burger with arugula, feta cheese, quail eggs and...</p>
+                            <h4 class="product-name">Shut Up and Drive</h4>
+                            <p class="product-info">Rihanna</p>
                             
                         </div>
                     </div>
                     <div>
                         <div class="product-card"><img class="product-img"
-                                src="../assets/images/3.png"
+                            src="../assets/images/tracks/10.jpg"
                                 style="width: 224px;">
-                            <h4 class="product-name">Rap</h4>
-                            <p class="product-info">Gourmet burger with arugula, feta cheese, quail eggs and...</p>
+                            <h4 class="product-name">SUPERMODEL</h4>
+                            <p class="product-info">Måneskin</p>
                             
                         </div>
                     </div>
                     <div>
                         <div class="product-card"><img class="product-img"
-                                src="../assets/images/3.png"
+                            src="../assets/images/tracks/28.jpg"
                                 style="width: 224px;">
-                            <h4 class="product-name">Rap</h4>
-                            <p class="product-info">Gourmet burger with arugula, feta cheese, quail eggs and...</p>
+                            <h4 class="product-name">River Flows in You</h4>
+                            <p class="product-info">Caterina Barontini</p>
                             
                         </div>
                     </div>
@@ -271,7 +276,6 @@
         </div>
         <div class="info-section">
             <img src="" alt="" class="info-logo">
-            <p>Contact</p>
             <div class="info-box">
                 <p class="info-box-name">Hotline :</p>
                 <p class="info-box-phone">1900 – 123 456 78</p>

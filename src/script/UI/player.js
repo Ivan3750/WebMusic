@@ -24,38 +24,28 @@ export let trackIndex = 0;
 
 let playing = false;
 
-
-
-const checkTrackLike = (track) =>{
+const checkTrackLike = (track) => {
     let favoriteTracks = getFavoriteTracks();
     return favoriteTracks.some(favTrack => favTrack.title === track.title);
-
 }
 
-const tracks = dataMusic
-
+const tracks = dataMusic;
 
 export function loadTrack(index) {
-    console.log(tracks[index])
-    if(checkTrackLike(tracks[index])){
-        console.log("S" + tracks[index])
-        likeTrackImg.src = "../assets/icons/like.png"
-
-    }else{
-        likeTrackImg.src = "../assets/icons/heart.png"
-
+    if (checkTrackLike(tracks[index])) {
+        likeTrackImg.src = "../assets/icons/like.png";
+    } else {
+        likeTrackImg.src = "../assets/icons/heart.png";
     }
 
-
-    setProgress()
-    updateProgress()
-    console.log(index)
-    ppImg.src = "../assets/images/tracks/" + tracks[index].img
+    setProgress();
+    ppImg.src = "../assets/images/tracks/" + tracks[index].img;
     track.src = tracks[index].url;
     trackArtist.textContent = tracks[index].artist;
     trackTitle.textContent = tracks[index].title;
-    trackGenre.textContent = tracks[index].genre
-    trackImg.src = "../assets/images/tracks/" + tracks[index].img
+    trackGenre.textContent = tracks[index].genre;
+    trackImg.src = "../assets/images/tracks/" + tracks[index].img;
+    updateProgress();
 }
 
 function playPauseTrack() {
@@ -82,7 +72,7 @@ function stopTrack() {
 function changeTrack(direction) {
     trackIndex = (trackIndex + direction + tracks.length) % tracks.length;
     loadTrack(trackIndex);
-    updateProgress()
+    updateProgress();
     if (playing) track.play();
 }
 
@@ -94,9 +84,9 @@ function updateProgress() {
     progressBar.max = track.duration;
     progressBar.value = track.currentTime;
     currentTime.textContent = formatTime(track.currentTime);
-    if(isNaN(durationTime)){
+    if (isNaN(track.duration)) {
         durationTime.textContent = "00:00";
-    }{
+    } else {
         durationTime.textContent = formatTime(track.duration);
     }
 }
@@ -124,28 +114,27 @@ track.addEventListener("ended", () => changeTrack(1));
 
 loadTrack(trackIndex);
 
-
-
-
-
-
-
 const openPP = document.querySelector('.img-open-pp'); // pp = player-page
 const playerPage = document.querySelector('.player-page');
-
-openPP.addEventListener("click", ()=>{
-    if(playerPage.classList.contains("show")){
-        playerPage.classList.remove("show")
-        openPP.classList.remove("show")
-        body.style.overflow = "visible"
-        }else{
-        playerPage.classList.add("show")
-        openPP.classList.add("show")
-        body.style.overflow = "hidden"
-
+const body = document.body; // Додано, щоб уникнути помилки з body
+const player = document.querySelector('.player');
+openPP.addEventListener("click", () => {
+    if (playerPage.classList.contains("show")) {
+        playerPage.classList.remove("show");
+        openPP.classList.remove("show");
+        body.style.overflow = "visible";
+        if(window.screen.availWidth <= 768){
+            player.classList.remove("show")
+        }
+    } else {
+        playerPage.classList.add("show");
+        openPP.classList.add("show");
+        body.style.overflow = "hidden";
+        if(window.screen.availWidth <= 768){
+            player.classList.add("show")
+        }
     }
 })
-
 
 export function getFavoriteTracks() {
     const favoriteTracks = localStorage.getItem('favoriteTracks');
@@ -158,36 +147,23 @@ function saveFavoriteTracks(favoriteTracks) {
 
 function toggleFavorite() {
     let favoriteTracks = getFavoriteTracks();
-    console.log(favoriteTracks)
-    const isFavorite = favoriteTracks.some(favTrack =>{ 
-        return favTrack.title === tracks[trackIndex].title
-    });
-    console.log(isFavorite)
+    const isFavorite = favoriteTracks.some(favTrack => favTrack.title === tracks[trackIndex].title);
     if (isFavorite) {
         favoriteTracks = favoriteTracks.filter(favTrack => favTrack.title !== tracks[trackIndex].title);
-        likeTrackImg.src = "../assets/icons/heart.png"
-        
-        } else {
-            const favoriteTrack = {
-                src: track.src,
-                artist: trackArtist.textContent,
-                title: trackTitle.textContent,
-                img: (trackImg.src).split('/').pop()
-                };
-                favoriteTracks.push(favoriteTrack);
-                likeTrackImg.src = "../assets/icons/like.png"
-
+        likeTrackImg.src = "../assets/icons/heart.png";
+    } else {
+        const favoriteTrack = {
+            src: track.src,
+            artist: trackArtist.textContent,
+            title: trackTitle.textContent,
+            img: (trackImg.src).split('/').pop()
+        };
+        favoriteTracks.push(favoriteTrack);
+        likeTrackImg.src = "../assets/icons/like.png";
     }
-
     saveFavoriteTracks(favoriteTracks);
 }
 
-
-
-
-
-
-likeTrack.addEventListener("click", ()=>{
-    toggleFavorite()
-    console.log("work")
-})
+likeTrack.addEventListener("click", () => {
+    toggleFavorite();
+});

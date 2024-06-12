@@ -20,8 +20,16 @@ const selectGenre = document.querySelector('#select-genre');
 const tracks = dataMusic
 
 export const trackLoad = (img, title, artist, id) => {
-    const playerQueue = document.createElement("div")
-    playerQueue.classList.add("player-queue-box")
+
+    const playerQueues = document.querySelectorAll(".player-queue-box.active");
+    const playerQueue = document.createElement("div");
+    playerQueue.classList.add("player-queue-box");
+
+    // Видалити клас 'active' з усіх елементів у NodeList
+    playerQueues.forEach(queue => {
+        queue.classList.remove("active");
+    });
+
     playerQueue.addEventListener("click", ()=>{
         loadTrack(id - 1)
         playerQueue.classList.add("active")

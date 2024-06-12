@@ -242,13 +242,22 @@ background: radial-gradient(circle, rgb(251, 63, 154) 0%, rgb(239, 21, 90) 100%)
 }
 .hero__left {
   position: relative;
+  width: 450px;
+
 }
 .hero__left-title {
   position: relative;
-
   color: #fff;
   font-weight: 700;
-  font-size: 120px;
+  font-size: 100px;
+  z-index: 2;
+}
+.hero__left-description {
+  position: relative;
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  width: 400px;
   z-index: 2;
 }
 .hero__left-img {
@@ -364,7 +373,7 @@ transition: 2s;
   color: #ffffff;
   font-size: 160px;
   font-weight: 900;
-  text-shadow: 1px 1px 5px #000000eb;
+  text-shadow: 1px 1px 5px #9400a8eb;
 }
 .best-music__right-span-ed {
   font-size: 64px;
@@ -713,6 +722,35 @@ background-attachment: fixed;
 }
 .closeMobile-modal.show:hover {
   cursor: pointer;
+}
+
+.product-card {
+  /* box-shadow: 0px 0px 10px #000000bb;
+  text-align: center;
+  padding: 45px 0;
+  width: 250px;
+  margin: 30px auto;
+  border-radius: 20px;
+  height: 250px;
+  transition: 0.2s; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 41px;
+}
+
+.slick-initialized .slick-slide{
+  border-radius: 20px;
+  background-color: #aa35f7;
+}
+
+.product-img{
+  border-radius: 20px;
 }
 
 @media (max-width: 600.98px) {

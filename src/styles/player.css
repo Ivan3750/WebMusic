@@ -220,6 +220,11 @@
     background-color: #e49de9;
   }
 
+  .player-queue-box img{
+    width: 50px;
+    height: 50px;
+  }
+
   .player-queue-details{
     box-sizing:border-box;
     height: 100%;
@@ -277,6 +282,10 @@
     justify-content: space-evenly;
   }
 
+  .player-page-img{
+    object-fit: cover;
+  }
+
   @media (max-width: 950.98px){
 
     .player-page-img{
@@ -317,7 +326,7 @@
       flex-direction: column;
     }
     .player-page{
-      display: flex;
+      display: none;
       flex-direction: column;
     }
     .player-page-img{
@@ -366,18 +375,37 @@
 
 
 
-
-
-
-
-
-
   /* SEARCH FILE .CSS */
 
+  .search-box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+  }
 
+  .result{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    min-height: 35px;
+  }
+
+  #resultsContainer{
+    position: absolute;
+    top: 15px;
+    left: 0;
+    background-color: #ccc;
+    width: 100%;
+    border-radius: 0px 0px 20px 20px;
+    padding: 0px 10px;
+    padding-top: 20px;
+    box-sizing: border-box;
+  }
   
 
 .search{
+  z-index: 5;
   display: flex;
   height: 30px;
   justify-content: space-between;
@@ -387,14 +415,15 @@
   border-radius: 20px;
   padding: 5px;
   box-sizing: border-box;
-  }
+/*   width: 225px;
+ */  }
   
   .search-input{
-      outline: none;
-      border: 0;
-  width: 100px;
-      display: flex;
-  background-color: transparent;
+    outline: none;
+    border: 0;
+    width: 300px;
+    display: flex;
+    background-color: transparent;
   }
   .search-input.show{
       display: block;
@@ -440,3 +469,59 @@
   }
   
    */
+
+
+   @media (max-width: 750.98px){
+    main, .hero , .footer{
+      display: none;
+    }
+    .player{
+      height: 100%;
+      align-content: center;
+      justify-content: center;
+    }
+    .player.show{
+      height: 225px;
+    }
+    .player-page-left{
+      display: none;
+      
+    }
+    .player-page-right{
+      margin-top: 60px;
+    }
+    .header-new{
+      width: 100%;
+      position: fixed;
+      z-index: 100;
+      z-index: 501;
+      gap: 5px;
+      padding: 0px 20px;
+      box-sizing: border-box;
+    }
+    .search-input{
+      width: 180px;
+    }
+    .controls button {
+      padding: 6px;
+  }
+  }
+  .pp-btn{
+    color: red;
+  }
+
+  #select-genre option{
+    color: red;
+
+  }
+  #select-genre {
+    color: red;
+
+  }
+
+  
+  
+  
+  
+  
+  
